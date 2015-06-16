@@ -14,6 +14,8 @@
 		6384F65B1B29F2B600A5CFFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6384F65A1B29F2B600A5CFFC /* Images.xcassets */; };
 		6384F65E1B29F2B600A5CFFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6384F65C1B29F2B600A5CFFC /* LaunchScreen.xib */; };
 		6384F66A1B29F2B600A5CFFC /* AutoLayoutInCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384F6691B29F2B600A5CFFC /* AutoLayoutInCellTests.m */; };
+		6384F6751B29F43F00A5CFFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384F6741B29F43F00A5CFFC /* TableViewCell.m */; };
+		6384F6781B29F4D600A5CFFC /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384F6771B29F4D600A5CFFC /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		6384F6631B29F2B600A5CFFC /* AutoLayoutInCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutInCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6384F6681B29F2B600A5CFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6384F6691B29F2B600A5CFFC /* AutoLayoutInCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutInCellTests.m; sourceTree = "<group>"; };
+		6384F6731B29F43F00A5CFFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		6384F6741B29F43F00A5CFFC /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		6384F6761B29F4D600A5CFFC /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6384F6771B29F4D600A5CFFC /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				6384F65A1B29F2B600A5CFFC /* Images.xcassets */,
 				6384F65C1B29F2B600A5CFFC /* LaunchScreen.xib */,
 				6384F64D1B29F2B600A5CFFC /* Supporting Files */,
+				6384F6731B29F43F00A5CFFC /* TableViewCell.h */,
+				6384F6741B29F43F00A5CFFC /* TableViewCell.m */,
+				6384F6761B29F4D600A5CFFC /* Model.h */,
+				6384F6771B29F4D600A5CFFC /* Model.m */,
 			);
 			path = AutoLayoutInCell;
 			sourceTree = "<group>";
@@ -163,7 +173,7 @@
 		6384F6421B29F2B600A5CFFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alex Antonyuk";
 				TargetAttributes = {
 					6384F6491B29F2B600A5CFFC = {
@@ -220,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6384F6561B29F2B600A5CFFC /* ViewController.m in Sources */,
+				6384F6751B29F43F00A5CFFC /* TableViewCell.m in Sources */,
 				6384F6531B29F2B600A5CFFC /* AppDelegate.m in Sources */,
 				6384F6501B29F2B600A5CFFC /* main.m in Sources */,
+				6384F6781B29F4D600A5CFFC /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -349,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutInCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.antonyuk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,6 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutInCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.antonyuk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -377,6 +392,7 @@
 				);
 				INFOPLIST_FILE = AutoLayoutInCellTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.antonyuk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutInCell.app/AutoLayoutInCell";
 			};
@@ -392,6 +408,7 @@
 				);
 				INFOPLIST_FILE = AutoLayoutInCellTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.antonyuk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutInCell.app/AutoLayoutInCell";
 			};
@@ -416,6 +433,7 @@
 				6384F66F1B29F2B600A5CFFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6384F6701B29F2B600A5CFFC /* Build configuration list for PBXNativeTarget "AutoLayoutInCellTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +442,7 @@
 				6384F6721B29F2B600A5CFFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
